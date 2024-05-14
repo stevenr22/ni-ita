@@ -6,7 +6,7 @@ if(isset($_SESSION['usuario'])) {
     $nombre_completo = $nombre." ".$apellido;
     $id_usuario = $_SESSION['usuario']['cedula'];
 } else {
-    header("Location: index.html");
+    header("Location: login.html");
     exit();
 }
 ?>
@@ -17,11 +17,16 @@ if(isset($_SESSION['usuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descargando PDF</title>
+    <title>Descargar PDF</title>
 </head>
 
 <body>
+    <!-- Incluye la biblioteca jsPDF -->
+    <script src="jspdf.min.js"></script>
+    <!-- Incluye la biblioteca QRCode -->
+    <script src="qrcode.js"></script>
     <script>
+    // Función para generar el PDF
     function crearPdf() {
         // Crear un nuevo objeto jsPDF
         var doc = new jsPDF();
@@ -40,7 +45,10 @@ if(isset($_SESSION['usuario'])) {
         doc.addImage(qrCodeImage, 'PNG', 20, 50, 50, 50); // Ajusta las coordenadas y el tamaño según sea necesario
 
         // Guardar el PDF
-        doc.save('qr.pdf');
+        doc.save('comprobante.pdf');
+
+        // Redirigir al usuario a home.php después de descargar el PDF
+        window.location.href = 'home.php';
     }
 
     // Función para generar un código QR con la información proporcionada
@@ -61,19 +69,12 @@ if(isset($_SESSION['usuario'])) {
         // Devolver la imagen del código QR en formato base64
         return qrCodeImage;
     }
+
+    // Llamar a la función crearPdf() cuando se cargue la página
+    window.onload = function() {
+        crearPdf();
+    };
     </script>
-
-    <!-- Incluye la biblioteca jsPDF -->
-    <script src="jspdf.min.js"></script>
-    <!-- Incluye la biblioteca QRCode -->
-    <script src="qrcode.js"></script>
-
-
-
-
-
-
-
 </body>
 
 </html>
