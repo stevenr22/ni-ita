@@ -1,5 +1,9 @@
 
 
+
+
+
+
 function validarcedula(e){
     let cedula = document.getElementById("ced").value;
 

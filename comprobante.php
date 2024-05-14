@@ -21,12 +21,7 @@ if(isset($_SESSION['usuario'])) {
 </head>
 
 <body>
-    <!-- Incluye la biblioteca jsPDF -->
-    <script src="jspdf.min.js"></script>
-    <!-- Incluye la biblioteca QRCode -->
-    <script src="qrcode.js"></script>
     <script>
-    // Función para generar el PDF
     function crearPdf() {
         // Crear un nuevo objeto jsPDF
         var doc = new jsPDF();
@@ -45,10 +40,7 @@ if(isset($_SESSION['usuario'])) {
         doc.addImage(qrCodeImage, 'PNG', 20, 50, 50, 50); // Ajusta las coordenadas y el tamaño según sea necesario
 
         // Guardar el PDF
-        doc.save('comprobante.pdf');
-
-        // Redirigir al usuario a home.php después de descargar el PDF
-        window.location.href = 'home.php';
+        doc.save('qr.pdf');
     }
 
     // Función para generar un código QR con la información proporcionada
@@ -69,12 +61,19 @@ if(isset($_SESSION['usuario'])) {
         // Devolver la imagen del código QR en formato base64
         return qrCodeImage;
     }
-
-    // Llamar a la función crearPdf() cuando se cargue la página
-    window.onload = function() {
-        crearPdf();
-    };
     </script>
+
+    <!-- Incluye la biblioteca jsPDF -->
+    <script src="jspdf.min.js"></script>
+    <!-- Incluye la biblioteca QRCode -->
+    <script src="qrcode.js"></script>
+
+
+
+
+
+
+
 </body>
 
 </html>
