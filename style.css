@@ -1,0 +1,25 @@
+body{
+    background-color: rgba(122, 118, 113, 0.397);
+}
+
+
+button {
+    color: rgb(255, 255, 255); /* Cambia el color del texto a blanco */
+    background-color: rgb(59, 89, 152); /* Cambia el color de fondo a azul */
+    border: 2px solid rgb(59, 89, 152); /* Ajusta el color del borde al mismo azul */
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button:hover {
+    background-color: rgb(0, 120, 215); /* Cambia el color de fondo al pasar el cursor */
+    color: rgb(255, 255, 255); /* Cambia el color del texto al pasar el cursor */
+  }
+  
+  

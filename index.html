@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+    <div class="container col-md-4 p-md-5">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-tittle">
+                    <h2>
+                        <b>Inicie sesión</b>
+                    </h2>
+                </div>
+            </div>
+            <div class="card-body">
+                
+                <form class="form-signin" method="post" action="val_login.php">
+                    <label>Usuario:</label>
+                    <input type="text" class="form-control" placeholder="Ingrese su usuario" name="usu" required>
+                    <br>
+                    <label>Contraseña</label>
+                    <input type="password" class="form-control" placeholder="Ingrese su contraseña" name="pass" required>
+                    <br>
+                    
+                    <button type="submit" id="btn_log" class="btn btn-success">Ingresar</button>
+                    
+                    <a href="registro.html">Registrarse</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
