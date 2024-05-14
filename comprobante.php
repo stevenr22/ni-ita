@@ -6,7 +6,7 @@ if(isset($_SESSION['usuario'])) {
     $nombre_completo = $nombre." ".$apellido;
     $id_usuario = $_SESSION['usuario']['cedula'];
 } else {
-    header("Location: login.html");
+    header("Location: index.html");
     exit();
 }
 ?>
