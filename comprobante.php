@@ -18,13 +18,16 @@ if(isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descargar PDF</title>
+
+
 </head>
 
 <body>
-    <!-- Incluye la biblioteca jsPDF -->
+
     <script src="jspdf.min.js"></script>
     <!-- Incluye la biblioteca QRCode -->
     <script src="qrcode.js"></script>
+
 
     <script>
     // Función para generar el PDF
@@ -39,18 +42,20 @@ if(isset($_SESSION['usuario'])) {
         var qrData =
             'https://tecnops.es/generando-codigo-qr-con-javascript/'; // Puedes modificar esto según tu necesidad
 
-        // Generar el código QR
-        var qrCodeImage = generarQR(qrData);
+                // Generar el código QR
+                var qrCodeImage = generarQR(qrData);
 
-        // Agregar el código QR al PDF
-        doc.addImage(qrCodeImage, 'PNG', 20, 50, 50, 50); // Ajusta las coordenadas y el tamaño según sea necesario
+                // Agregar el código QR al PDF
+                doc.addImage(qrCodeImage, 'PNG', 20, 50, 50,
+                50); // Ajusta las coordenadas y el tamaño según sea necesario
 
-        // Guardar el PDF
-        doc.save('comprobante.pdf');
+                // Guardar el PDF
+                doc.save('comprobante.pdf');
 
-        // Redirigir al usuario a home.php después de descargar el PDF
-        window.location.href = 'home.php';
+                // Redirigir al usuario a home.php después de descargar el PDF
+                window.location.href = 'home.php';
     }
+
 
     // Función para generar un código QR con la información proporcionada
     function generarQR(data) {
