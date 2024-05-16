@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 </head>
 <body>
-    <div class="container col-md-4 p-md-5">
+    <div class="container col-md-6 p-md-5">
         <div class="card">
             <div class="card-header">
                 <div class="card-tittle">
@@ -18,17 +18,27 @@
             </div>
             <div class="card-body">
                 
-                <form class="form-signin" method="post" action="val_login.php">
+                <form class="form-group" method="post" action="val_login.php">
                     <label>Usuario:</label>
                     <input type="text" class="form-control" placeholder="Ingrese su usuario" name="usu" required>
                     <br>
                     <label>Contraseña</label>
                     <input type="password" class="form-control" placeholder="Ingrese su contraseña" name="pass" required>
                     <br>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" >Ingresar</button>
+
+
+                        </div>
+                        <div class="col">
+                            <a href="registro.html">Registrarse</a>
+
+
+                        </div>
+                    </div>
                     
-                    <button type="submit" id="btn_log" class="btn btn-success">Ingresar</button>
                     
-                    <a href="registro.html">Registrarse</a>
                 </form>
             </div>
         </div>

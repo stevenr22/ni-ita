@@ -2,8 +2,6 @@
 
 
 
-
-
 function validarcedula(e){
     let cedula = document.getElementById("ced").value;
 
@@ -67,4 +65,10 @@ function solonum(e) {
         return false;
     }
 }
+
+
+function obtenerdatos(){
+
+}
+
 

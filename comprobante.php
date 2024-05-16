@@ -25,6 +25,7 @@ if(isset($_SESSION['usuario'])) {
     <script src="jspdf.min.js"></script>
     <!-- Incluye la biblioteca QRCode -->
     <script src="qrcode.js"></script>
+
     <script>
     // Función para generar el PDF
     function crearPdf() {
@@ -36,7 +37,7 @@ if(isset($_SESSION['usuario'])) {
 
         // Obtener la información para el código QR
         var qrData =
-        'https://tecnops.es/generando-codigo-qr-con-javascript/'; // Puedes modificar esto según tu necesidad
+            'https://tecnops.es/generando-codigo-qr-con-javascript/'; // Puedes modificar esto según tu necesidad
 
         // Generar el código QR
         var qrCodeImage = generarQR(qrData);

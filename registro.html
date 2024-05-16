@@ -9,7 +9,7 @@
 
     </head>
     <body>
-        <div class="container col-md-4 p-md-5">
+        <div class="container col-md-6 p-md-5">
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">
@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <form class="form-group" action="val_regis.php" method="post">
                         <label for="Cédula" class="form-label">Cédula:</label>
-                        <input type="text" onkeypress=" return validarCedula(event)"  name="ced" id="ced" placeholder="Ingrese su cédula" class="form-control" required>
+                        <input type="text" onkeypress=" return validarcedula(event)"  name="ced" id="ced" placeholder="Ingrese su cédula" class="form-control" required>
                         <br>
                         <label for="Nombre usuario">Nombre de usuario:</label>
                         <input type="text" name="nombre_usu" id="nombre_usu" class="form-control" placeholder="Ingrese su nombre de usuario" required>
@@ -29,19 +29,31 @@
                         <input type="password" name="pass" id="pass" placeholder="Ingrese su contraseña" class="form-control" required>
                         <br>
                         <label for="Nombre" class="form-label">Nombre:</label>
-                        <input type="text" onkeypress="return validarLetras(event)" name="nombre" id="nombre" placeholder="Ingrese su nombre" class="form-control" required>
+                        <input type="text" onkeypress="return validarletras(event)" name="nombre" id="nombre" placeholder="Ingrese su nombre" class="form-control" required>
                         <br>
                         <label for="Apellido" class="form-label">Apellido:</label>
-                        <input type="text" onkeypress="return validarLetras(event)" name="apellido" id="apellido" placeholder="Ingrese su apellido" class="form-control" required>
+                        <input type="text" onkeypress="return validarletras(event)" name="apellido" id="apellido" placeholder="Ingrese su apellido" class="form-control" required>
 
                         <br>
                         <label for="Correo">Correo electronico:</label>
                         <input type="email" name="email" id="email" placeholder="Ingrese su correo" class="form-control" required>
                         <br>
-                        <button type="submit" class="btn btn-success">Registre</button>
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" >Registre</button>
+
+
+                            </div>
+                            <div class="col">
+                                <a href="index.html">Ingrese!</a>
+
+
+                            </div>
+
+
+                        </div>
                         
                         
-                        <a href="index.html">Ingrese!</a>
                     </form>
                 </div>
             </div>

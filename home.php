@@ -12,7 +12,7 @@ if(isset($_SESSION['usuario'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,10 +64,33 @@ if(isset($_SESSION['usuario'])) {
 
                     <button type="submit" class="btn btn-primary">Registrar</button>
                 </form>
+            
+                
+
             </div>
+            
+
+            
+
+        </div>
+        <br>
+        <div class="card">
+            <div class="row">
+
+                <button onclick="cerrarSesion();"  type="submit">Cerrar sesión</button>
+            </div>
+
         </div>
     </div>
     <script src="main.js"></script>
+    <script>
+        function cerrarSesion(){
+            window.location = 'cerrar_sesion.php';
+        }
+
+        
+    </script>
+    
 
    
 </body>

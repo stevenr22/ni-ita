@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "
         <script>
             alert(' Usuario no encontrado.');
-            window.location = 'login.html';
+            window.location = 'index.html';
         </script>
        
         ";    }
