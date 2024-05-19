@@ -7,6 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $producto = $_POST["producto"];
     $tot = $_POST["tot"];
 
+ 
+
     $insercion = "INSERT INTO compra(Fecha, total, producto, cedula) VALUES ('$fecha','$tot','$producto','$cedula')";
     $resultado_inser = mysqli_query($con, $insercion);
     if ($resultado_inser) {
@@ -23,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     cancelButtonText: 'No'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = 'comprobante.php';
+                        window.location.href = 'comprobante.html';
                     } else {
                         window.location.href = 'home.php';
                     }
